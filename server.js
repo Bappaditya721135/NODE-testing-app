@@ -23,7 +23,7 @@ server.post("/post", async (req, res) => {
     console.log(name, email, password)
     res.status(200).json({
         success: true,
-        body: {name: "name", email: "email", password: "password"}
+        body: {name: name, email: "email", password: "password"}
     })
     // res.send("this is post")
 })
