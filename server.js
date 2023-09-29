@@ -17,9 +17,10 @@ server.get("/", (req, res) => {
 
 server.post("/post", (req, res) => {
     const {name, email, password} = req.body;
+    console.log(name, email, password)
     res.status(200).json({
         success: true,
-        body: {name, email, password}
+        body: {name, email, password, hello: "hello"}
     })
     // res.send("this is post")
 })
