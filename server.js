@@ -16,11 +16,11 @@ server.get("/", (req, res) => {
 })
 
 server.post("/post", async (req, res) => {
-    const {name, email, password} = await req.body;
+    const {name, email, password} = req.body;
     console.log(name, email, password)
     res.status(200).json({
         success: true,
-        body: {name: name, email: email, password: password}
+        body: {name: "name", email: "email", password: "password"}
     })
     // res.send("this is post")
 })
