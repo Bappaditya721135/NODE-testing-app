@@ -21,7 +21,11 @@ server.get("/", (req, res) => {
 server.post("/post", async (req, res) => {
     const {name, email, password} = req.body;
     console.log(name, email, password)
-    res.status(200).cookie("token", "token").json({
+    res.status(200).cookie("token", "token", {
+        maxAge: 1000 * 60,
+        sameSite: "none",
+        secure: true,
+    }).json({
         success: true,
         body: {name: name, email: email, password: password}
     })
