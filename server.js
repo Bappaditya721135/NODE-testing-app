@@ -25,7 +25,6 @@ server.post("/post", async (req, res) => {
         success: true,
         body: {name: name, email: email, password: password}
     })
-    // res.send("this is post")
 })
 
 
