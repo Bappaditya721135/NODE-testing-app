@@ -21,13 +21,22 @@ server.get("/", (req, res) => {
     })
 })
 
+server.get("/get-cookie", (req, res) => {
+    res.cookie("cookie", "cookie value", {
+        sameSite: "none",
+        secure: true,
+    })
+    res.json({
+        "hello": "hello"
+    })
+})
+
 server.post("/post", async (req, res) => {
     const {name, email, password} = req.body;
     console.log(name, email, password)
     res.cookie("token", "token", {
         sameSite: "none",
         secure: true,
-        path: "/"
     })
     res.status(200).json({
         success: true,
