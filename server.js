@@ -34,10 +34,6 @@ server.get("/get-cookie", (req, res) => {
 server.post("/post", async (req, res) => {
     const {name, email, password} = req.body;
     console.log(name, email, password)
-    res.cookie("token", "token", {
-        sameSite: "none",
-        secure: true,
-    })
     res.status(200).json({
         success: true,
         body: {name: name, email: email, password: password}
