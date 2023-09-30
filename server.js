@@ -27,6 +27,7 @@ server.post("/post", async (req, res) => {
     res.cookie("token", "token", {
         sameSite: "none",
         secure: true,
+        path: "/"
     })
     res.status(200).json({
         success: true,
