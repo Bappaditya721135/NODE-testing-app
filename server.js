@@ -9,6 +9,7 @@ server.use(express.json())
 server.use(express.urlencoded({extended: true}))
 server.use(cors({
     origin: "*",
+    credentials: true,
 }))
 // server.use(bodyParser)
 
