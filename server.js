@@ -8,7 +8,7 @@ const server = express();
 server.use(express.json())
 server.use(express.urlencoded({extended: true}))
 server.use(cors({
-    origin: "http://127.0.0.1:5500/",
+    origin: "http://127.0.0.1:5500/cors.html",
 }))
 // server.use(bodyParser)
 
